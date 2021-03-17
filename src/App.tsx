@@ -1,13 +1,24 @@
 import React from "react";
-import { Button, ButtonToolbar } from "react-bootstrap";
+import styled from "styled-components";
+
+const Container = styled.div`
+  display: flex;
+  width: 100vw;
+  height: 100vh;
+  justify-content: center;
+  align-items: center;
+`;
+
+const Insider = styled.div`
+  justify-content: center;
+  align-items: center;
+`;
 
 function App() {
   return (
-    <div className="App">
-      <ButtonToolbar>
-        <Button>Primary</Button>
-      </ButtonToolbar>
-    </div>
+    <Container>
+      <Insider>hello world!</Insider>
+    </Container>
   );
 }
 
