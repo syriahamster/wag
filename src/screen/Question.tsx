@@ -1,11 +1,22 @@
 import React, { useState, useEffect } from "react";
-import { Link } from "react-router-dom";
 import styled from "styled-components";
+import { Link } from "react-router-dom";
 import { RouteComponentProps } from "react-router-dom";
+
+const Container = styled.div`
+  display: flex;
+  flex-flow: column;
+`;
 
 const ButtonList = styled.div`
   display: flex;
   flex-flow: column;
+  border-radius: 30px;
+  background-color: #fff;
+  width: 600px;
+  height: 300px;
+  justify-content: space-around;
+  align-items: center;
 `;
 
 interface MatchParams {
@@ -110,7 +121,7 @@ const Question = ({ match }: RouteComponentProps<MatchParams>) => {
   }, []);
 
   return (
-    <>
+    <Container>
       <ButtonList>
         <h1>{questionStatements.question}</h1>
         {questionStatements.answer.map((item, index) => {
@@ -121,7 +132,7 @@ const Question = ({ match }: RouteComponentProps<MatchParams>) => {
           );
         })}
       </ButtonList>
-    </>
+    </Container>
   );
 };
 

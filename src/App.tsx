@@ -9,6 +9,7 @@ import NotFound from "./screen/NotFound";
 
 import Result from "./screen/Result";
 import Calculating from "./screen/Calculating";
+import bg from "./assets/image/cheese.png";
 
 const Container = styled.div`
   display: flex;
@@ -17,6 +18,8 @@ const Container = styled.div`
   height: 100vh;
   justify-content: center;
   align-items: center;
+  background-image: url(${bg});
+  background-size: 100px;
 `;
 
 //EI, SN, TF, JP

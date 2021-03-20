@@ -2,9 +2,21 @@ import React from "react";
 import { useHistory } from "react-router-dom";
 import { RouteComponentProps } from "react-router-dom";
 
+import styled from "styled-components";
 interface MatchParams {
   result: string;
 }
+
+const Container = styled.div`
+  display: flex;
+  flex-flow: column;
+  border-radius: 30px;
+  background-color: #fff;
+  width: 600px;
+  height: 300px;
+  justify-content: space-around;
+  align-items: center;
+`;
 
 const Calculating = ({ match }: RouteComponentProps<MatchParams>) => {
   let history = useHistory();
@@ -100,13 +112,13 @@ const Calculating = ({ match }: RouteComponentProps<MatchParams>) => {
   }
 
   return (
-    <>
+    <Container>
       <h1>계산중...</h1>
       <button onClick={() => switchResult(calculator())}>
         시간이 지나면 <br />
         결과 페이지로 이동
       </button>
-    </>
+    </Container>
   );
 };
 
