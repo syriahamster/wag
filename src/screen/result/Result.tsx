@@ -3,6 +3,8 @@ import styled from "styled-components";
 import { Link } from "react-router-dom";
 import { RouteComponentProps } from "react-router-dom";
 
+import Share from "../component/Share";
+
 import ISTJ from "./ISTJ.png";
 import ISFJ from "./ISFJ.png";
 import INFJ from "./INFJ.png";
@@ -59,31 +61,6 @@ const MatchBox = styled.div`
 const MatchItem = styled.div`
   background-color: #fff;
   justify-content: space-around;
-  align-items: center;
-`;
-
-const ShareBox = styled.div`
-  display: flex;
-  flex-flow: column;
-  border-radius: 30px;
-  width: 600px;
-  height: 100px;
-  margin-top: 30px;
-  background-color: #fff;
-  justify-content: center;
-  align-items: center;
-`;
-
-const ShareTitle = styled.div`
-  flex: 1;
-  height: 10;
-`;
-const ShareRow = styled.div`
-  flex: 1;
-  display: flex;
-  width: 100px;
-  height: 50px;
-  justify-content: center;
   align-items: center;
 `;
 
@@ -177,6 +154,7 @@ const resultMap = [
 const Result = ({ match }: RouteComponentProps<MatchParams>) => {
   const resultId = parseInt(match.params.id);
   const result = resultMap[resultId - 1];
+  const shareLink = `/result/${resultId}`;
   const nexturl = `/result/${resultId + 1}`;
   // const [result, setResult] = useState(resultMap[match.params.id]);
 
@@ -205,15 +183,7 @@ const Result = ({ match }: RouteComponentProps<MatchParams>) => {
           <button>테스트 다시하기</button>
         </Link>
       </SubBox>
-      <ShareBox>
-        <ShareTitle>결과 공유하기</ShareTitle>
-        <ShareRow>
-          <div>Kakao</div>
-          <div>Facebook</div>
-          <div>Twitter</div>
-          <div>Link</div>
-        </ShareRow>
-      </ShareBox>
+      <Share title="결과 공유하기" url={shareLink} />
       About us <br></br>copyright
     </Container>
   );
