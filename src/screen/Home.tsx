@@ -5,6 +5,7 @@ import { Link } from "react-router-dom";
 const Container = styled.div`
   display: flex;
   flex-flow: column;
+  align-items: center;
 `;
 
 const MainBox = styled.div`
@@ -24,7 +25,10 @@ const Title = styled.div`
 `;
 
 const StartButtonBox = styled.div`
+  display: flex;
   flex: 1;
+  flex-flow: column;
+  align-items: center;
 `;
 
 const StartButton = styled.button`
@@ -34,7 +38,12 @@ const StartButton = styled.button`
   height: 50px;
 `;
 
-const SubBox = styled.div`
+const Count = styled.div`
+  flex: 1;
+  height: 10;
+`;
+
+const ShareBox = styled.div`
   display: flex;
   flex-flow: column;
   border-radius: 30px;
@@ -46,10 +55,6 @@ const SubBox = styled.div`
   align-items: center;
 `;
 
-const Count = styled.div`
-  flex: 1;
-  height: 10;
-`;
 const ShareTitle = styled.div`
   flex: 1;
   height: 10;
@@ -69,22 +74,22 @@ function Home() {
       <MainBox>
         <Title>당신은 어떤 지인가요?</Title>
         <StartButtonBox>
+          <Count>참여자 수: 250,867 명</Count>
           <Link to="/question/1">
             <StartButton>테스트 시작!</StartButton>
           </Link>
         </StartButtonBox>
       </MainBox>
-      <SubBox>
-        <Count>참여자 수: 250,867 명</Count>
-        <ShareTitle>공유하기</ShareTitle>
+      <ShareBox>
+        <ShareTitle>테스트 공유하기</ShareTitle>
         <ShareRow>
           <div>Kakao</div>
           <div>Facebook</div>
           <div>Twitter</div>
           <div>Link</div>
         </ShareRow>
-        About us <br></br>copyright
-      </SubBox>
+      </ShareBox>
+      About us <br></br>copyright
     </Container>
   );
 }

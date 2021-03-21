@@ -7,7 +7,7 @@ import Question from "./screen/Question";
 import About from "./screen/About";
 import NotFound from "./screen/NotFound";
 
-import Result from "./screen/Result";
+import Result from "./screen/result/Result";
 import Calculating from "./screen/Calculating";
 import bg from "./assets/image/cheese.png";
 
