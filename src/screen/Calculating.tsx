@@ -30,7 +30,7 @@ const Calculating = ({ match }: RouteComponentProps<MatchParams>) => {
         .map((item) => item.score)
         .reduce((a, b) => a + b) > baseline
         ? "E"
-        : "F";
+        : "I";
     let sn =
       answers
         .filter((item) => item.indicator === "SN")
@@ -52,6 +52,7 @@ const Calculating = ({ match }: RouteComponentProps<MatchParams>) => {
         .reduce((a, b) => a + b) > baseline
         ? "J"
         : "P";
+    console.log(ei + sn + tf + jp);
     return ei + sn + tf + jp;
   }
 

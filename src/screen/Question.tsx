@@ -60,31 +60,31 @@ const questionList = [
     ],
   },
   {
-    question: "당신은 이성적입니까",
+    question: "당신은 사실이 중요합니까",
     answer: [
       {
         indicator: "TF",
-        title: "네 일단 생각합니다",
+        title: "네 사실이 중요합니다.",
         score: 1,
       },
       {
         indicator: "TF",
-        title: "아니오 다 뿌수고 싶은걸 보니 감정이 우선입니다.",
+        title: "아니오 관계가 더 우선입니다.",
         score: 0,
       },
     ],
   },
   {
-    question: "당신은 어떻게 받아들입니까",
+    question: "당신은 계획적입니까?",
     answer: [
       {
         indicator: "JP",
-        title: "일단 앞뒤 상황을 듣고 판단을 해봐요.",
+        title: "계획적이예요!",
         score: 1,
       },
       {
         indicator: "JP",
-        title: "보이는게 전부 아닌가요?",
+        title: "즉흥적입니다.",
         score: 0,
       },
     ],
